@@ -1,45 +1,21 @@
 <template>
   <div id="AddictionCard">
-    <div v-for="item in cardList" class="card">
-      <div :style="{backgroundImage:'url('+ bg +')'}" class="cardTop">
-        <div class="cardContent">
-          <div class="cardTitle">
-            <div  class="title">
-                <h1>瘾卡</h1>
-                <span>
-                普通卡
-                <br>
-                YEN CARE
-              </span>
-            </div>
-            <div class="cardPrice">
-              <p><span>余额：</span><b>￥</b>{{item.total}}</p>
-              <p class="discount"><img src="../assets/images/discount.png" alt="">&nbsp{{item.discount}}</p>
-            </div>
-          </div>
-        </div>
-        <div class="cardImg">
-          <img :src="item.bgImage" alt="">
-        </div>
-      </div>
-      <div class="cardBottom">
-        <span>现金:￥{{item.cash}}</span>
-        <span>赠送:￥{{item.gift}}</span>
-        <button v-if="item.button.disable" class="cardBtn" @click="cardBtn()">充值</button>
-        <!--<button class="cardBtn" @click="cardBtn()">充值</button>-->
-      </div>
-    </div>
+    <c-ard :cardList="cardList"></c-ard>
   </div>
 </template>
 <script>
     import { Toast } from 'mint-ui';
+    import Card from '../components/Card.vue';
     export default{
-        name: '',
+      name: '',
       data(){
         return{
           bg:require('../assets/images/cardBg.png'),
           cardList:{}
         }
+      },
+      components:{
+        'c-ard':Card
       },
       mounted(){
         this.$ajax({
@@ -61,152 +37,12 @@
           }.bind(this));
       },
       methods:{
-        cardBtn(){
-          this.$ajax({
-            method:'POST',
-            url:'/yen/card/list'
-          }).then(function(response){
-            console.log(response);
-          }.bind(this))
-        }
-
       }
     }
 </script>
 <style scoped>
-  #AddictionCard{
-    width:100%;
-    height:100%;
-  }
-  #AddictionCard .card{
-    width:91.2%;
-    height:3.6rem;
-    border-radius:0.25rem;
-    margin:0 auto;
-    margin-top:0.38rem;
-    position:relative;
-    box-shadow: 10px 10px 100px #d9d9d9;
-  }
-  #AddictionCard .cardTop{
-    position:absolute;
-    left:0;
-    top:0;
-    border-radius:0.25rem 0.25rem 0 0;
-    height:2.7rem;
-    width:100%;
-    background:#00b8fe;
-    z-index:2;
-    background-position: 10% 10%;
-  }
-  #AddictionCard .cardBottom{
-    position:absolute;
-    left:0;
-    bottom:0;
-    border-radius:0 0 0.25rem 0.25rem;
-    height:0.9rem;
-    width:100%;
-    z-index:2;
-  }
-  #AddictionCard .cardTitle{
-    float:left;
-    width:55%;
-    position:relative;
-  }
-  #AddictionCard .cardImg{
-    float:right;
-    width:45%;
-  }
-  #AddictionCard .cardTitle h1{
-    font-family:MFLiHei_Noncommercial-Regular;
-    font-size:0.6rem;
-    color:#fff;
-    font-weight:normal;
-    float:left;
-  }
-  #AddictionCard .cardTitle h1:after{
-    content:'';
-    border-left:1px solid #fff;
-    height:0.34rem !important;
-    margin-left:0.17rem;
-    width:100%;
-    display:block;
-    top:30%;
-    position:absolute;
-    left:42.5%
-  }
-  #AddictionCard .cardTitle .title{
-    width:100%;
-    height:0.7rem;
-    width:2.8rem;
-    position:absolute;
-    left:50%;
-    margin-left:-1.4rem;
-    top:0.48rem;
-  }
-  #AddictionCard .cardTitle .title span{
-    float:left;
-    padding-left:0.37rem;
-    font-size:0.24rem;
-    color:#fff;
-    font-weight: 200;
-  }
-  .cardTitle div{
-    width:100%;
-  }
-  #AddictionCard .cardPrice{
-    width:100%;
-    display:block;
-    position:absolute;
-    left:50%;
-    margin-left:-1.3rem;
-    /*width:2.8rem;*/
-    top:1.4rem;
-  }
-  #AddictionCard .cardPrice p{
-    font-size:0.52rem;
-    color:#f3ff3a;
-    font-weight: 200;
-  }
-  #AddictionCard .cardPrice span{
-    color:#fff;
-    font-size:0.27rem;
-  }
-  #AddictionCard .cardPrice b{
-    font-size:0.24rem;
-    colo:#fff;
-  }
-  #AddictionCard .cardPrice p.discount{
-    color:#fff;
-    font-size:0.22rem;
-    margin-top:0.12rem;
-  }
-  #AddictionCard .cardImg img{
-    /*width:1.61rem;*/
-    /*height:1.61rem;*/
-    /*border:4px solid #fff;*/
-    /*border-radius:50%;*/
-    position:absolute;
-    right:0.4rem;
-    top:0.52rem;
-  }
-  #AddictionCard .cardBottom span{
-    font-size:0.26rem;
-    color:#666666;
-    line-height:0.9rem;
-  }
-  #AddictionCard .cardBottom span:first-child{
-    padding-left:0.36rem;
-  }
-  #AddictionCard .cardBtn{
-    width:1.2rem;
-    height:0.58rem;
-    font-size:0.26rem;
-    background-color:#fe6000;
-    color:#fff;
-    border:0;
-    border-radius:3px;
-    float:right;
-    margin-right:0.4rem;
-    margin-top:0.16rem;
+  #AddictionCard {
+    width: 100%;
+    padding-top:0.38rem;
   }
 </style>
