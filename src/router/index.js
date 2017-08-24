@@ -9,17 +9,23 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'Hello',
+      component: Hello
+    },
+    {
+      path: '/addictionCard',
       name: 'AddictionCard',
+      meta: {
+        title: '瘾卡'
+      },
       component: AddictionCard
     },
     {
-      path: '/AddictionCard',
-      name: 'AddictionCard',
-      component: AddictionCard
-    },
-    {
-      path: '/TopUp',
+      path: '/topup/:cardId',
       name: 'TopUp',
+      meta: {
+        title: '冲瘾健身'
+      },
       component: TopUp
     }
   ]

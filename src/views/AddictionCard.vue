@@ -24,6 +24,7 @@
         }).then(function(response){
             if(response.data.message == 'SUCCESS'){
                 this.cardList = response.data.data;
+                console.log(this.cardList)
             }else{
               Toast({
                 message: response.data.message,

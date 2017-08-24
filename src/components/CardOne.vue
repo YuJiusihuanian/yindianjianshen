@@ -1,6 +1,6 @@
 <template>
   <div id="Card">
-    <div v-for="item in cardList" class="card">
+    <div class="card">
       <div :style="{backgroundImage:'url('+ bg +')'}" class="cardTop">
         <div class="cardContent">
           <div class="cardTitle">
@@ -13,31 +13,32 @@
               </span>
             </div>
             <div class="cardPrice">
-              <p><span>余额：</span><b>￥</b>{{item.total}}</p>
-              <p class="discount"><img src="../assets/images/discount.png" alt="">&nbsp{{item.discount}}</p>
+              <p><span>余额：</span><b>￥</b>{{cardOne.total}}</p>
+              <p class="discount"><img src="../assets/images/discount.png" alt="">&nbsp{{cardOne.discount}}</p>
             </div>
           </div>
         </div>
         <div class="cardImg">
-          <img :src="item.bgImage" alt="">
+          <img :src="cardOne.bgImage" alt="">
         </div>
       </div>
       <div class="cardBottom">
-        <span>现金:￥{{item.cash}}</span>
-        <span>赠送:￥{{item.gift}}</span>
-        <router-link view v-wechat-title="$route.meta.title" v-show="!!item.button.disable" class="cardBtn" :to="{name:'TopUp',params:{cardId:item.cardId}}">充值</router-link>
+        <span>现金:￥{{cardOne.cash}}</span>
+        <span>赠送:￥{{cardOne.gift}}</span>
+        <router-link view v-wechat-title="$route.meta.title" class="cardRule" to="./">规则&nbsp></router-link>
         <!--<button class="cardBtn" @click="cardBtn()">充值</button>-->
       </div>
     </div>
   </div>
 </template>
 <script>
+
     export default{
       name: 'Card',
-      props: ['cardList'],
+      props: ['cardOne'],
       data(){
         return{
-          bg:require('../assets/images/cardBg.png'),
+          bg:require('../assets/images/cardBg.png')
         }
       },
       methods:{
@@ -63,7 +64,7 @@
     border-radius:0.25rem;
     margin:0 auto;
     position:relative;
-    box-shadow: 0px 0px 100px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 100px #d9d9d9;
   }
   #Card .card:not(:first-child){
     margin-top:0.38rem;
@@ -178,17 +179,11 @@
   #Card .cardBottom span:first-child{
     padding-left:0.36rem;
   }
-  #Card .cardBtn{
-    /*width:1.2rem;*/
-    /*height:0.58rem;*/
-    padding:0.12rem 0.34rem;
+  #Card .cardRule{
     font-size:0.26rem;
-    background-color:#fe6000;
-    color:#fff;
-    border:0;
-    border-radius:3px;
+    color:#00b8fe;
     float:right;
     margin-right:0.4rem;
-    margin-top:0.16rem;
+    margin-top:0.3rem;
   }
 </style>

@@ -6,6 +6,7 @@ import Mint from 'mint-ui';
 import router from './router'
 import axios from 'axios';
 import 'mint-ui/lib/style.css';
+Vue.use(require('vue-wechat-title'));
 
 Vue.use(Mint);
 Vue.config.productionTip = false
