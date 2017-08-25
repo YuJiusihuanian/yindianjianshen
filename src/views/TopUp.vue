@@ -86,11 +86,7 @@
                 this.activeObj = this.cardOne.coupon[i];
               }
             }
-            for(var i=0;i<this.cardOne.templates.length;i++){
-              if(this.cardOne.templates[i].selected == true){
-                this.hoverObj = this.cardOne.templates[i];
-              }
-            }
+
           }else{
             Toast({
               message: response.data.message,
@@ -123,32 +119,32 @@
           this.hoverObj.selected = item.selected;
           console.log(this.hoverObj);
 
-          this.$ajax({
-            method:'POST',
-            data:{
-              "cardId":this.cardId,
-              "templateId":this.hoverObj.id,
-              "couponId":this.activeObj.couponUserId
-            },
-            url:'/yen/card/adjust'
-          }).then(function(response){
-            if(response.data.message == 'SUCCESS'){
-              this.cardOne = response.data.data;
-            }else{
-              Toast({
-                message: response.data.message,
-                position: 'bottom',
-                duration: 3000
-              });
-            }
-          }.bind(this))
-            .catch(function (error) {
-              Toast({
-                message: '接口错误',
-                position: 'bottom',
-                duration: 3000
-              });
-            }.bind(this));
+//          this.$ajax({
+//            method:'POST',
+//            data:{
+//              "cardId":this.cardId,
+//              "templateId":this.hoverObj.id,
+//              "couponId":this.activeObj.couponUserId
+//            },
+//            url:'/yen/card/adjust'
+//          }).then(function(response){
+//            if(response.data.message == 'SUCCESS'){
+//              this.cardOne = response.data.data;
+//            }else{
+//              Toast({
+//                message: response.data.message,
+//                position: 'bottom',
+//                duration: 3000
+//              });
+//            }
+//          }.bind(this))
+//            .catch(function (error) {
+//              Toast({
+//                message: '接口错误',
+//                position: 'bottom',
+//                duration: 3000
+//              });
+//            }.bind(this));
 
         },
         payBtn(){
@@ -215,7 +211,7 @@
                 duration: 3000
               });
             }.bind(this));
-        }
+        },
       }
     }
 </script>
