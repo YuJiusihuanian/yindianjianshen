@@ -1,7 +1,7 @@
 <template>
   <div id="Card">
     <div class="card">
-      <div :style="{backgroundImage:'url('+ bg +')'}" class="cardTop">
+      <div class="cardTop">
         <div class="cardContent">
           <div class="cardTitle">
             <div  class="title">
@@ -25,7 +25,7 @@
       <div class="cardBottom">
         <span>现金:￥{{cardOne.cash}}</span>
         <span>赠送:￥{{cardOne.gift}}</span>
-        <router-link view v-wechat-title="$route.meta.title" class="cardRule" to="./">规则&nbsp></router-link>
+        <a view v-wechat-title="$route.meta.title" class="cardRule" to="./">规则&nbsp></a>
         <!--<button class="cardBtn" @click="cardBtn()">充值</button>-->
       </div>
     </div>
@@ -76,9 +76,9 @@
     border-radius:0.25rem 0.25rem 0 0;
     height:2.7rem;
     width:100%;
-    background:#00b8fe;
     z-index:2;
     background-position: 10% 10%;
+    background:url(../assets/images/cardBg.png) #00b8fe;
   }
   #Card .cardBottom{
     position:absolute;
@@ -88,6 +88,7 @@
     height:0.9rem;
     width:100%;
     z-index:2;
+    background: #fff;
   }
   #Card .cardTitle{
     float:left;

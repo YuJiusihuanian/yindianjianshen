@@ -29,12 +29,16 @@
               Toast({
                 message: response.data.message,
                 position: 'bottom',
-                duration: 5000
+                duration: 3000
               });
             }
         }.bind(this))
           .catch(function (error) {
-          //无不通
+            Toast({
+              message: '接口错误',
+              position: 'bottom',
+              duration: 3000
+            });
           }.bind(this));
       },
       methods:{

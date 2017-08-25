@@ -1,7 +1,7 @@
 <template>
   <div id="Card">
     <div v-for="item in cardList" class="card">
-      <div :style="{backgroundImage:'url('+ bg +')'}" class="cardTop">
+      <div class="cardTop">
         <div class="cardContent">
           <div class="cardTitle">
             <div  class="title">
@@ -75,9 +75,9 @@
     border-radius:0.25rem 0.25rem 0 0;
     height:2.7rem;
     width:100%;
-    background:#00b8fe;
     z-index:2;
     background-position: 10% 10%;
+    background:url(../assets/images/cardBg.png) #00b8fe;
   }
   #Card .cardBottom{
     position:absolute;
@@ -87,6 +87,7 @@
     height:0.9rem;
     width:100%;
     z-index:2;
+    background: #fff;
   }
   #Card .cardTitle{
     float:left;
@@ -160,6 +161,12 @@
     color:#fff;
     font-size:0.22rem;
     margin-top:0.12rem;
+    /*width:0.3rem;*/
+    /*height:0.24rem;*/
+  }
+  #Card .cardPrice p.discount img{
+    width:0.3rem;
+    height:0.24rem;
   }
   #Card .cardImg img{
     /*width:1.61rem;*/
@@ -169,6 +176,8 @@
     position:absolute;
     right:0.4rem;
     top:0.52rem;
+    /*width:100%;*/
+    /*height:100%;*/
   }
   #Card .cardBottom span{
     font-size:0.26rem;
