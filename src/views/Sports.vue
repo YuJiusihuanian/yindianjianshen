@@ -15,7 +15,7 @@
         mounted(){
           this.$ajax({
             method:'GET',
-            url:'/yencardlist',
+            url:'/api/yencardlist',
 
           }).then(function(response){
             console.log(response);

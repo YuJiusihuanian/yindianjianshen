@@ -72,7 +72,7 @@
         this.$ajax({
           method:'GET',
           data:{"cardId":this.cardId},
-          url:'/yencardbuild'
+          url:'/api/yencardbuild'
         }).then(function(response){
             console.log(response)
           if(response.data.message == 'SUCCESS'){
@@ -153,7 +153,7 @@
                 "templateId":this.hoverObj.id,
                 "couponId":this.activeObj.couponUserId
             },
-            url:'/yencardcreate'
+            url:'/api/yencardcreate'
           }).then(function(response){
             if(response.data.message == 'SUCCESS'){
               this.cardOne = response.data.data;
@@ -189,7 +189,7 @@
               "templateId":this.hoverObj.id,
               "couponId":this.activeObj.couponUserId
             },
-            url:'/yencardadjust'
+            url:'/api/yencardadjust'
           }).then(function(response){
             if(response.data.message == 'SUCCESS'){
               this.adjust = response.data.data;

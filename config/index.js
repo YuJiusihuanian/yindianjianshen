@@ -23,7 +23,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8080,
+    port: 8084,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -35,11 +35,11 @@ module.exports = {
       //     '^/yen': '/yen'
       //   }
       // }
-      '/yen': {
+      '/api': {
         target: 'http://localhost:3000',
         changeOrigin: true,
         pathRewrite: {
-          '^/yen': '/yen'
+          '^/api': '/'
         }
       }
     },
