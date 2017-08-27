@@ -1,7 +1,7 @@
 <template>
   <div id="SportsList">
     <mt-swipe class="mt-swipe" :auto="4000">
-      <mt-swipe-item v-for="item in sportsList.banner" v-if="item.disable === true" class="item" ><img @click="jump(item)" :href="item.event.url" :src="item.icon" alt=""></mt-swipe-item>
+      <mt-swipe-item v-for="(item,key) in sportsList.banner" :key="key" v-if="item.disable === true" class="item" ><img @click="jump(item)" :href="item.event.url" :src="item.icon" alt=""></mt-swipe-item>
     </mt-swipe>
       <ul class="week">
         <li v-for="(item,key) in sportsList.calendar" :class="{'hover':ind === key}" @click="sportsHover(item,key)"><p v-if="ind === key">{{item.monthDayFormat}}</p>{{item.dayOfWeek}}</li>
@@ -22,9 +22,9 @@
               </div>
             </div>
             <div class="right">
-              <router-link v-if="item.button.disable === true" class="sportsBtn" to="/">{{item.button.title}}</router-link>
-              <router-link v-if="item.stock === 0" class="sportsBtn" to="/">抢座 <span class="disc"><b>满员</b></span></router-link>
-              <router-link v-if="item.stock < 10 && item.stock !=0" class="sportsBtn" to="/">预约 <span class="disc"><b>紧张</b></span></router-link>
+              <router-link v-if="item.button.disable === true" class="sportsBtn" :to="{name:'Sports',params:{sportsId:item.id}}">{{item.button.title}}</router-link>
+              <router-link v-if="item.stock === 0" class="sportsBtn" :to="{name:'Sports',params:{sportsId:item.id}}">抢座 <span class="disc"><b>满员</b></span></router-link>
+              <router-link v-if="item.stock < 10 && item.stock !=0" class="sportsBtn" :to="{name:'Sports',params:{sportsId:item.id}}">预约 <span class="disc"><b>紧张</b></span></router-link>
               <p><img src="../assets/images/discount-hover.png" alt="">&nbsp&nbsp瘾卡{{item.yenPrice}}</p>
             </div>
           </div>
@@ -63,7 +63,6 @@
             this.sportsList = response.data.data;
             this.weekList = response.data.data.course4Day[this.ind];
             this.address = response.data.data.address;
-            console.log(this.sportsList)
           }else{
             Toast({
               message: response.data.message,
@@ -83,7 +82,6 @@
       methods:{
         sportsHover(item,key){
             this.ind = key;
-            console.log(this.$route.name === 'SportsList')
           this.$ajax({
             method:'GET',
             url:'/api/courseschedule'
@@ -110,6 +108,9 @@
         jump(item){
           console.log(item);
           window.location.href=item.icon;
+        },
+        book(){
+
         }
       }
 
@@ -120,7 +121,7 @@
     width:100%;
     height:100%;
   }
-  .mt-swipe{
+  #SportsList .mt-swipe{
     width:100%;
     height:2.4rem;
     width:100%;
