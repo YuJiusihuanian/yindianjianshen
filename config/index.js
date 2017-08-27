@@ -23,13 +23,20 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8082,
+    port: 8080,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+      // '/yen': {
+      //   target: 'http://106.15.91.17',
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     '^/yen': '/yen'
+      //   }
+      // }
       '/yen': {
-        target: 'http://106.15.91.17',
+        target: 'http://localhost:3000',
         changeOrigin: true,
         pathRewrite: {
           '^/yen': '/yen'

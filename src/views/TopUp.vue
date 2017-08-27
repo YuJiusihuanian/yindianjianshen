@@ -56,10 +56,6 @@
           cardOne:{},
           cardId:'',
           popupVisible:false,
-          actions:[{
-            name: '拍照',
-            method: '111'
-          }],
           value:'',
           ishover:false,
           hoverObj:{},
@@ -74,11 +70,13 @@
       mounted(){
         this.cardId = this.$route.params.cardId;
         this.$ajax({
-          method:'POST',
+          method:'GET',
           data:{"cardId":this.cardId},
-          url:'/yen/card/build'
+          url:'/yencardbuild'
         }).then(function(response){
+            console.log(response)
           if(response.data.message == 'SUCCESS'){
+
             this.cardOne = response.data.data;
             for(var i=0;i<this.cardOne.coupon.length;i++){
               if(this.cardOne.coupon[i].selected == true){
@@ -149,13 +147,13 @@
         },
         payBtn(){
           this.$ajax({
-            method:'POST',
+            method:'GET',
             data:{
                 "cardId":this.cardId,
                 "templateId":this.hoverObj.id,
                 "couponId":this.activeObj.couponUserId
             },
-            url:'/yen/card/create'
+            url:'/yencardcreate'
           }).then(function(response){
             if(response.data.message == 'SUCCESS'){
               this.cardOne = response.data.data;
@@ -185,13 +183,13 @@
             console.log(this.activeObj);
 
           this.$ajax({
-            method:'POST',
+            method:'GET',
             data:{
               "cardId":this.cardId,
               "templateId":this.hoverObj.id,
               "couponId":this.activeObj.couponUserId
             },
-            url:'/yen/card/adjust'
+            url:'/yencardadjust'
           }).then(function(response){
             if(response.data.message == 'SUCCESS'){
               this.adjust = response.data.data;
@@ -351,13 +349,13 @@
     border-bottom:1px solid #dcdcdc;
   }
   #TopUp .addTicket li{
-    background: url('../assets/images/noselected.png') no-repeat 6rem 0.3rem;
+    background: url('../assets/images/noselected.png') no-repeat 100% 0.3rem;
   }
   #TopUp .addTicket li.active{
-    background: url('../assets/images/selected.png') no-repeat 6rem 0.3rem;
+    background: url('../assets/images/selected.png') no-repeat 100% 0.3rem;
   }
   #TopUp .addTicket li:hover {
-    background: url('../assets/images/selected.png') no-repeat 6rem 0.3rem;
+    background: url('../assets/images/selected.png') no-repeat 100% 0.3rem;
   }
   #TopUp .addTicket li span{
     color:#999999;

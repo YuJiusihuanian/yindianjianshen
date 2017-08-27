@@ -1,0 +1,768 @@
+{
+  "yencardlist":{
+    "code": 200,
+    "data": [
+        {
+            "button": {
+                "disable": true,
+                "title": "充值"
+            },
+            "cardId": 16,
+            "cash": "0",
+            "discount": "消费立打8.5折",
+            "gift": "0",
+            "total": "0",
+            "type": 1
+        },
+        {
+            "button": {
+                "disable": true,
+                "title": "充值"
+            },
+            "cardId": 17,
+            "cash": "0",
+            "discount": "消费立打8.5折",
+            "gift": "0",
+            "total": "0",
+            "type": 2
+        }
+    ],
+    "message": "SUCCESS"
+},
+  "yencardbuild":{
+    "code": 200,
+    "data": {
+        "button": {
+            "disable": true,
+            "title": "支付（￥450）"
+        },
+        "cardId": 16,
+        "cash": "0",
+        "coupon": [
+            {
+                "couponUserId": 23,
+                "price": "50",
+                "selected": true,
+                "time": "2017.08.26至2017.09.09"
+            },
+            {
+                "couponUserId": 25,
+                "price": "10",
+                "selected": false,
+                "time": "2017.08.26至2017.09.09"
+            }
+        ],
+        "discount": "消费立打8.5折",
+        "gift": "0",
+        "templates": [
+            {
+                "id": 87,
+                "price": "10",
+                "rulePrice": "200",
+                "selected": false
+            },
+            {
+                "id": 88,
+                "price": "50",
+                "rulePrice": "500",
+                "selected": true
+            },
+            {
+                "id": 89,
+                "price": "200",
+                "rulePrice": "1000",
+                "selected": false
+            },
+            {
+                "id": 90,
+                "price": "500",
+                "rulePrice": "2000",
+                "selected": false
+            }
+        ],
+        "total": "0",
+        "type": 1
+    },
+    "message": "SUCCESS"
+},
+  "yencardadjust": {
+    "code": 200,
+    "data": {
+        "button": {
+            "disable": true,
+            "title": "支付（￥190）"
+        },
+        "cardId": 16,
+        "cash": "0",
+        "coupon": [
+            {
+                "couponUserId": 25,
+                "price": "10",
+                "selected": true,
+                "time": "2017.08.26至2017.09.09"
+            }
+        ],
+        "discount": "消费立打8.5折",
+        "gift": "0",
+        "templates": [
+            {
+                "id": 87,
+                "price": "10",
+                "rulePrice": "200",
+                "selected": true
+            },
+            {
+                "id": 88,
+                "price": "50",
+                "rulePrice": "500",
+                "selected": false
+            },
+            {
+                "id": 89,
+                "price": "200",
+                "rulePrice": "1000",
+                "selected": false
+            },
+            {
+                "id": 90,
+                "price": "500",
+                "rulePrice": "2000",
+                "selected": false
+            }
+        ],
+        "total": "0",
+        "type": 1
+    },
+    "message": "SUCCESS"
+},
+    "yencardcreate": {
+  "code": 200,
+  "data": {
+
+  },
+  "message": "orderId"
+},
+    "courseschedule":{
+    "code": 200,
+    "data": {
+        "address": {
+            "detailAddress": "湖南长沙市岳麓区麓山南路店299号渔湾码头时尚商业广场1层",
+            "latitude": "28.1692535039",
+            "longitude": "112.9443454742",
+            "name": "天马冲瘾店"
+        },
+        "banner": [
+            {
+                "disable": true,
+                "event": {
+                    "url": "https://ju.taobao.com/m/jusp/o/dw/mtp.htm"
+                },
+                "icon": "http://img.alicdn.com/imgextra/i3/56/TB2FNdkXaKIJuJjSZFxXXavHVXa_!!56-0-yamato.jpg_q50.jpg"
+            },
+            {
+                "disable": true,
+                "event": {
+                    "url": "http://h5.taobao.com"
+                },
+                "icon": "http://img.alicdn.com/simba/img/TB1GrxMSVXXXXXPXpXXSutbFXXX.jpg_q50.jpg"
+            }
+        ],
+        "calendar": [
+            {
+                "dayOfWeek": "六",
+                "dayOfWeekDetail": "今天",
+                "monthDayFormat": "08.26",
+                "yearMonthDayFormat": "2017-08-26"
+            },
+            {
+                "dayOfWeek": "日",
+                "dayOfWeekDetail": "明天",
+                "monthDayFormat": "08.27",
+                "yearMonthDayFormat": "2017-08-27"
+            },
+            {
+                "dayOfWeek": "一",
+                "dayOfWeekDetail": "周一",
+                "monthDayFormat": "08.28",
+                "yearMonthDayFormat": "2017-08-28"
+            },
+            {
+                "dayOfWeek": "二",
+                "dayOfWeekDetail": "周二",
+                "monthDayFormat": "08.29",
+                "yearMonthDayFormat": "2017-08-29"
+            },
+            {
+                "dayOfWeek": "三",
+                "dayOfWeekDetail": "周三",
+                "monthDayFormat": "08.30",
+                "yearMonthDayFormat": "2017-08-30"
+            },
+            {
+                "dayOfWeek": "四",
+                "dayOfWeekDetail": "周四",
+                "monthDayFormat": "08.31",
+                "yearMonthDayFormat": "2017-08-31"
+            },
+            {
+                "dayOfWeek": "五",
+                "dayOfWeekDetail": "周五",
+                "monthDayFormat": "09.01",
+                "yearMonthDayFormat": "2017-09-01"
+            }
+        ],
+        "course4Day": [
+            {
+                "course": [
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 43,
+                        "price": "¥0.2",
+                        "shortTime": "19.00-20.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-26 19.00-20.00",
+                        "title": "3Yin-Yang瑜伽8-26",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": false,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 42,
+                        "price": "¥0.2",
+                        "shortTime": "20.00-21.00",
+                        "stock": 0,
+                        "stockIcon": "http://img.alicdn.com/tfs/TB1Kxe8QFXXXXbSXVXXXXXXXXXX-183-129.png",
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-26 20.00-21.00",
+                        "title": "2Yin-Yang瑜伽8-26",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 41,
+                        "price": "¥0.2",
+                        "shortTime": "21.00-22.00",
+                        "stock": 2,
+                        "stockIcon": "http://gw.alicdn.com/tps/i2/TB19BluIVXXXXX6XpXXN4ls0XXX-183-129.png",
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-26 21.00-22.00",
+                        "title": "1Yin-Yang瑜伽8-26",
+                        "yenPrice": "¥0.17"
+                    }
+                ],
+                "yearMonthDayFormat": "2017-08-26"
+            },
+            {
+                "course": [
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 46,
+                        "price": "¥0.2",
+                        "shortTime": "19.00-20.00",
+                        "stock": 2,
+                        "stockIcon": "http://gw.alicdn.com/tps/i2/TB19BluIVXXXXX6XpXXN4ls0XXX-183-129.png",
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-27 19.00-20.00",
+                        "title": "3Yin-Yang瑜伽8-27",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": false,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 45,
+                        "price": "¥0.2",
+                        "shortTime": "20.00-21.00",
+                        "stock": 0,
+                        "stockIcon": "http://img.alicdn.com/tfs/TB1Kxe8QFXXXXbSXVXXXXXXXXXX-183-129.png",
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-27 20.00-21.00",
+                        "title": "2Yin-Yang瑜伽8-27",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 44,
+                        "price": "¥0.2",
+                        "shortTime": "21.00-22.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-27 21.00-22.00",
+                        "title": "1Yin-Yang瑜伽8-27",
+                        "yenPrice": "¥0.17"
+                    }
+                ],
+                "yearMonthDayFormat": "2017-08-27"
+            },
+            {
+                "course": [
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 49,
+                        "price": "¥0.2",
+                        "shortTime": "19.00-20.00",
+                        "stock": 2,
+                        "stockIcon": "http://gw.alicdn.com/tps/i2/TB19BluIVXXXXX6XpXXN4ls0XXX-183-129.png",
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-28 19.00-20.00",
+                        "title": "3Yin-Yang瑜伽8-28",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": false,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 48,
+                        "price": "¥0.2",
+                        "shortTime": "20.00-21.00",
+                        "stock": 0,
+                        "stockIcon": "http://img.alicdn.com/tfs/TB1Kxe8QFXXXXbSXVXXXXXXXXXX-183-129.png",
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-28 20.00-21.00",
+                        "title": "2Yin-Yang瑜伽8-28",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 47,
+                        "price": "¥0.2",
+                        "shortTime": "21.00-22.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-28 21.00-22.00",
+                        "title": "1Yin-Yang瑜伽8-28",
+                        "yenPrice": "¥0.17"
+                    }
+                ],
+                "yearMonthDayFormat": "2017-08-28"
+            },
+            {
+                "course": [
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 52,
+                        "price": "¥0.2",
+                        "shortTime": "19.00-20.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-29 19.00-20.00",
+                        "title": "3Yin-Yang瑜伽8-29",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 51,
+                        "price": "¥0.2",
+                        "shortTime": "20.00-21.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-29 20.00-21.00",
+                        "title": "2Yin-Yang瑜伽8-29",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 50,
+                        "price": "¥0.2",
+                        "shortTime": "21.00-22.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-29 21.00-22.00",
+                        "title": "1Yin-Yang瑜伽8-29",
+                        "yenPrice": "¥0.17"
+                    }
+                ],
+                "yearMonthDayFormat": "2017-08-29"
+            },
+            {
+                "course": [
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 55,
+                        "price": "¥0.2",
+                        "shortTime": "19.00-20.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-30 19.00-20.00",
+                        "title": "3Yin-Yang瑜伽8-30",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 54,
+                        "price": "¥0.2",
+                        "shortTime": "20.00-21.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-30 20.00-21.00",
+                        "title": "2Yin-Yang瑜伽8-30",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 53,
+                        "price": "¥0.2",
+                        "shortTime": "21.00-22.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-30 21.00-22.00",
+                        "title": "1Yin-Yang瑜伽8-30",
+                        "yenPrice": "¥0.17"
+                    }
+                ],
+                "yearMonthDayFormat": "2017-08-30"
+            },
+            {
+                "course": [
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 58,
+                        "price": "¥0.2",
+                        "shortTime": "19.00-20.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-31 19.00-20.00",
+                        "title": "3Yin-Yang瑜伽8-31",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 57,
+                        "price": "¥0.2",
+                        "shortTime": "20.00-21.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-31 20.00-21.00",
+                        "title": "2Yin-Yang瑜伽8-31",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 56,
+                        "price": "¥0.2",
+                        "shortTime": "21.00-22.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-08-31 21.00-22.00",
+                        "title": "1Yin-Yang瑜伽8-31",
+                        "yenPrice": "¥0.17"
+                    }
+                ],
+                "yearMonthDayFormat": "2017-08-31"
+            },
+            {
+                "course": [
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 61,
+                        "price": "¥0.2",
+                        "shortTime": "19.00-20.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-09-01 19.00-20.00",
+                        "title": "3Yin-Yang瑜伽9-1",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 60,
+                        "price": "¥0.2",
+                        "shortTime": "20.00-21.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-09-01 20.00-21.00",
+                        "title": "2Yin-Yang瑜伽9-1",
+                        "yenPrice": "¥0.17"
+                    },
+                    {
+                        "button": {
+                            "disable": true,
+                            "title": "预约"
+                        },
+                        "coach": {
+                            "avatar": "http://avatar",
+                            "id": 3
+                        },
+                        "id": 59,
+                        "price": "¥0.2",
+                        "shortTime": "21.00-22.00",
+                        "stock": 30,
+                        "tags": [
+                            "瑜珈",
+                            "拉升"
+                        ],
+                        "time": "2017-09-01 21.00-22.00",
+                        "title": "1Yin-Yang瑜伽9-1",
+                        "yenPrice": "¥0.17"
+                    }
+                ],
+                "yearMonthDayFormat": "2017-09-01"
+            }
+        ]
+    },
+    "message": "SUCCESS"
+},
+    "couponuserlist": {
+    "code": 200,
+    "data": [
+        {
+            "couponUserId": 23,
+            "payType": "仅限瘾卡充值时使用",
+            "price": "50",
+            "rule": "使用条件：订单满500元",
+            "selected": true,
+            "sourceDesc": "来源：线下领取",
+            "time": "有效期：2017.08.26至2017.09.09"
+        },
+        {
+            "couponUserId": 25,
+            "payType": "瘾卡充值和单次购买时均可使用",
+            "price": "10",
+            "rule": "使用条件：订单满10元",
+            "selected": false,
+            "sourceDesc": "来源：邀请好友",
+            "time": "有效期：2017.08.26至2017.09.09"
+        }
+    ],
+    "message": "SUCCESS"
+},
+    "coursedetail": {
+    "code": 200,
+    "data": {
+        "address": {
+            "detailAddress": "湖南长沙市岳麓区麓山南路店299号渔湾码头时尚商业广场1层",
+            "latitude": "28.1692535039",
+            "longitude": "112.9443454742",
+            "name": "天马冲瘾店"
+        },
+        "button": {
+            "disable": false,
+            "title": "立即预约"
+        },
+        "care": "1.本店提供更衣室、储物柜、卫生间，不设淋浴；\n2.课程开始前6小时后取消预约，不支持退款；\n3.室内设高速Wifi，密码：xxxxx；",
+        "coach": {
+            "avatar": "http://avatar",
+            "desc": "杨琦",
+            "id": 3,
+            "nick": "chessman"
+        },
+        "crowd": "适合所有新同学，以及想要平均增进力量与柔软度的练习者。",
+        "description": "课程结合了强化力量和放松延展这两种元素，让身体更加平衡。练习者会在课程中体验振奋、愉悦的体位法，也会长时间停留在部分深层的延展动作中，培养冥想的平静与专注。",
+        "faq": "1.问题1：xxx\n2.问题2：xxx\n3.问题3：xxx",
+        "id": 70,
+        "price": "¥0.2",
+        "shortTime": "19.00-20.00",
+        "stock": 1,
+        "stockIcon": "http://gw.alicdn.com/tps/i2/TB19BluIVXXXXX6XpXXN4ls0XXX-183-129.png",
+        "tags": [
+            "瑜珈",
+            "拉升"
+        ],
+        "time": "2017-09-04 19.00-20.00",
+        "title": "3Yin-Yang瑜伽9-4",
+        "trainingEffect": "效果\n效果2\n效果3",
+        "yenPrice": "¥0.17"
+    },
+    "message": "SUCCESS"
+},
+    "couponuserobtain": {
+    "code": 200,
+    "message": "领券成功."
+}
+}

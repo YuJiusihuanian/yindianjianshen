@@ -41,14 +41,14 @@
         }
       },
       methods:{
-        cardBtn(){
-          this.$ajax({
-            method:'POST',
-            url:'/yen/card/list'
-          }).then(function(response){
-            console.log(response);
-          }.bind(this))
-        }
+//        cardBtn(){
+//          this.$ajax({
+//            method:'POST',
+//            url:'yencardlist'
+//          }).then(function(response){
+//            console.log(response);
+//          }.bind(this))
+//        }
       }
 
     }
