@@ -339,4 +339,9 @@
     margin:0 auto;
     margin-bottom:0.1rem;
   }
+  #SportsList:after{
+    content:'';
+    display:block;
+    height:1.2rem;
+  }
 </style>

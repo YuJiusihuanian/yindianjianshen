@@ -9,7 +9,7 @@
     <div v-show="navHoverN === 0" class="classContent content">
       <div class="head"><img src="../assets/images/classContent.png" alt=""><h2>课程内容</h2></div>
       <div class="main">
-        <div class="left"><img src="../assets/images/sportHead.png" alt=""></div>
+        <div class="left"><img :src="detailObj.stockIcon" alt=""></div>
         <div class="right">
           <h3>{{detailObj.title}}</h3>
           <p>地址：{{addressList.name}}</p>
@@ -23,19 +23,17 @@
       <div class="clearfix"></div>
       <div class="banner">
         <swiper :options="swiperOption"  ref="mySwiper">
-          <!-- 这部分放你要渲染的那些内容 -->
           <swiper-slide><img src="../assets/images/classbanner1.png" alt=""></swiper-slide>
           <swiper-slide><img src="../assets/images/classbanner2.png" alt=""></swiper-slide>
           <swiper-slide><img src="../assets/images/classbanner1.png" alt=""></swiper-slide>
           <swiper-slide><img src="../assets/images/classbanner2.png" alt=""></swiper-slide>
-          <!-- 这是轮播的小圆点 -->
           <!--<div class="swiper-pagination" slot="pagination"></div>-->
         </swiper>
       </div>
       <div class="clearfix"></div>
       <div class="effect">
         <h4>训练效果</h4>
-        <p>{{detailObj.description}}</p>
+        <p>{{detailObj.trainingEffect}}</p>
       </div>
       <div class="clearfix"></div>
       <div class="crowd">
@@ -51,12 +49,31 @@
     </div>
     <div v-show="navHoverN === 1" class="coachContent content">
       <div class="head"><img src="../assets/images/coachContent.png" alt=""><h2>教练介绍</h2></div>
+      <div class="main">
+        <div class="right">
+          <h3>{{coachList.desc}}</h3>
+          <p>{{coachList.nick}}</p>
+        </div>
+        <div class="left"><img :src="detailObj.stockIcon" alt=""></div>
+      </div>
+      <div class="clearfix"></div>
     </div>
     <div v-show="navHoverN === 2" class="mattersContent content">
       <div class="head"><img src="../assets/images/mattersContent.png" alt=""><h2>注意事项</h2></div>
+      <p class="care">{{detailObj.care}}</p>
     </div>
     <div v-show="navHoverN === 3" class="stepsContent content">
       <div class="head"><img src="../assets/images/stepsContent.png" alt=""><h2>健身步骤</h2></div>
+      <div class="flow">
+        <div class="bg">
+        </div>
+        <div class="title">
+          <p>预约付费成功</p>
+          <p>扫描门禁二维码</p>
+          <p>验证成功入场上课</p>
+        </div>
+
+      </div>
     </div>
     <div class="navbar">
       <router-link v-if="buttonList.disable" to="/" class="left">立即预约</router-link>
@@ -79,6 +96,7 @@
               detailObj:{},
               buttonList:{},
               addressList:{},
+              coachList:{},
               swiperOption: {
                 //是一个组件自有属性，如果notNextTick设置为true，组件则不会通过NextTick来实例化swiper，也就意味着你可以在第一时间获取到swiper对象，假如你需要刚加载遍使用获取swiper对象来做什么事，那么这个属性一定要是true
                 notNextTick: true,
@@ -139,6 +157,7 @@
               this.detailObj = response.data.data;
               this.buttonList = response.data.data.button;
               this.addressList = response.data.data.address;
+              this.coachList = response.data.data.coach;
               console.log(this.detailObj)
             }else{
               Toast({
@@ -254,7 +273,6 @@
     font-family:'黑体';
   }
   #Sports .classContent{
-
   }
   #Sports .classContent .main{
     width:96.54%;
@@ -437,7 +455,6 @@
     width:100%;
     padding-bottom:0.25rem;
     position:relative;
-    margin-bottom:1.4rem;
   }
   #Sports .classContent .faq p:after{
     content:'';
@@ -475,5 +492,76 @@
     color:#444444;
     padding-top:0.8rem;
     margin-left:3.46%;
+  }
+  #Sports:after{
+    content:'';
+    display:block;
+    height:1.2rem;
+  }
+  #Sports .coachContent .main{
+    width:96.54%;
+    /*float:right;*/
+    border-bottom:1px solid #dcdcdc;
+    display:flex;
+    padding:0.32rem 0 0.1rem 0.07rem;
+    margin-bottom:0.3rem;
+  }
+  #Sports .coachContent .main .left{
+    width:30%;
+  }
+
+  #Sports .coachContent .main .right{
+    padding-left:0.3rem;
+    width:70%;
+  }
+  #Sports .coachContent .main .right h3{
+    font-size:0.28rem;
+    color:#00b8fe;
+    padding-bottom:0.14rem;
+  }
+  #Sports .coachContent .main .right p{
+    font-size:0.26rem;
+    color:#666666;
+    line-height:0.42rem;
+  }
+  #Sports .coachContent .main .right p span{
+    color:#00b8fe;
+  }
+  #Sports .mattersContent .care{
+    font-size:0.26rem;
+    color:#444;
+    width:93.6%;
+    margin:0 auto;
+    line-height:0.4rem;
+    padding:0.2rem 0;
+  }
+  #Sports .flow{
+    display: flex;
+    margin:0 auto;
+    width:69%;
+    padding-top:0.4rem;
+    justify-content:space-between;
+  }
+  #Sports .flow .bg{
+    background:url(../assets/images/flow.png) no-repeat;
+    width:0.76rem;
+    height:3.61rem;
+    background-size:100% 100%;
+    /*margin-left:0.8rem;*/
+    /*margin-top:0.4rem;*/
+  }
+  #Sports .flow .title{
+    margin-left:0.2rem;
+    margin-top:0.12rem;
+  }
+  #Sports .flow .title p{
+    /*line-height:1.4rem;*/
+    text-align:center;
+    padding:0.1rem 0.4rem;
+    margin-bottom:0.8rem;
+    background:#f5f5f5;
+    font-size:0.28rem;
+    color:#444444;
+    border-radius:0.1rem;
   }
 </style>
