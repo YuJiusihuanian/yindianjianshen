@@ -288,22 +288,33 @@
   }
 
   #SportsList .sportlist li .disc{
-    background:url(../assets/images/discbg.png) no-repeat;
-    width:0.68rem;
-    height:0.68rem;
+    /*background:url(../assets/images/discbg.png) no-repeat;*/
+    /*width:0.68rem;*/
+    /*height:0.68rem;*/
+    /*position:absolute;*/
+    /*top:-0.66rem;*/
+    /*right:-0.29rem;*/
+    content:"";
+    display:block;
+    height:0;
+    border-width:0 0.3rem 0.3rem;
+    border-style:none solid solid;
+    border-color:transparent transparent #00b8fe;
     position:absolute;
-    top:-0.66rem;
-    right:-0.29rem;
+    transform:rotate(45deg);
+    left:0.46rem;
+    top:-0.56rem;
+    width:0.4rem;
   }
   #SportsList .sportlist li .disc b{
-    transform: rotate(45deg);
+    /*transform: rotate(45deg);*/
     color:#fff;
     font-size:0.2rem;
     width: 0.68rem;
     height: 0.68rem;
     display: block;
-    text-indent: 0.1rem;
-    padding-top:0.06rem;
+    /*text-indent: 0.1rem;*/
+    /*padding-top:0.02rem;*/
   }
   #SportsList .sportlist .title b:last-child .point{
     display:none;
