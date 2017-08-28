@@ -7,6 +7,8 @@ const Hello = resolve => require(['../components/Hello.vue'], resolve);
 const TopUp = resolve => require(['../views/TopUp.vue'], resolve);
 const Sports = resolve => require(['../views/Sports.vue'], resolve);
 const SportsList = resolve => require(['../views/SportsList.vue'], resolve);
+const Invite = resolve => require(['../views/Invite.vue'], resolve);
+const Coupon = resolve => require(['../views/Coupon.vue'], resolve);
 export default new Router({
   routes: [
     {
@@ -46,5 +48,21 @@ export default new Router({
       },
       component: Sports
     },
+    {
+      path: '/invite',
+      name: 'Invite',
+      meta: {
+        title: '邀请有奖'
+      },
+      component: Invite
+    },
+    {
+      path: '/coupon',
+      name: 'Coupon',
+      meta: {
+        title: '我的礼券'
+      },
+      component: Coupon
+    }
   ]
 })

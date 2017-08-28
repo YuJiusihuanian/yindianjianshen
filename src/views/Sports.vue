@@ -78,7 +78,7 @@
     <div class="navbar">
       <router-link v-if="buttonList.disable" to="/" class="left">立即预约</router-link>
       <router-link v-if="!buttonList.disable" to="/" class="left" :class="{'disable':buttonList.disable === false}">立即预约</router-link>
-    <router-link to="/" class="left">分享</router-link>
+    <router-link to="/invite" class="left">分享</router-link>
   </div>
   </div>
 </template>

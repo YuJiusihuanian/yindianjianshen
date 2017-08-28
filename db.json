@@ -764,5 +764,13 @@
     "couponuserobtain": {
     "code": 200,
     "message": "领券成功."
-}
+},
+    "couponuserinvitation": {
+    "code": 200,
+    "data": {
+        "inviterId": 15,
+        "totalPrize": "10"
+    },
+    "message": "SUCCESS"
+},
 }
