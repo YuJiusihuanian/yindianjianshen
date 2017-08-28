@@ -22,6 +22,13 @@ export default {
     font-family:MFLiHei_Noncommercial-Regular;
     src:url("./assets/font/MFLiHei_Noncommercial-Regular.otf")
   }
+  @font-face{
+    font-family:PingFang Medium_downcc;
+    src:url("./assets/font/PingFang Medium_downcc.otf")
+  }
+  body{
+    font-family: PingFang Medium_downcc;
+  }
   .clearfix{
     zoom:1;
   }

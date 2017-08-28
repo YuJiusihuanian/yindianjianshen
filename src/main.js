@@ -5,10 +5,13 @@ import App from './App'
 import Mint from 'mint-ui';
 import router from './router'
 import axios from 'axios';
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'mint-ui/lib/style.css';
-Vue.use(require('vue-wechat-title'));
 
+Vue.use(require('vue-wechat-title'));
 Vue.use(Mint);
+Vue.use(VueAwesomeSwiper)
+
 Vue.config.productionTip = false
 Vue.prototype.$ajax = axios;
 
