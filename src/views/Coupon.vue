@@ -3,6 +3,7 @@
     <ul class="nav">
       <li v-for="(item,key) in navList" :class="{'hover':ind === key}" @click="navHover(item,key)">{{item}}</li>
     </ul>
+    <p class="use">使用说明</p>
     <div class="noCoupon"　v-if="couponList === ''">
       <img src="../assets/images/coupon.png" alt="">
       <p>亲，还没有券喔~</p>
@@ -82,7 +83,14 @@
     margin:0 auto;
     justify-content:space-between;
     padding-top:0.42rem;
-    padding-bottom:0.9rem;
+    /*padding-bottom:0.9rem;*/
+  }
+  #Coupon .use{
+    font-size:0.22rem;
+    color:#00b8fe;
+    text-align:right;
+    padding-right:0.5rem;
+    line-height:1rem;
   }
   #Coupon .nav li{
     /*width:25%;*/
