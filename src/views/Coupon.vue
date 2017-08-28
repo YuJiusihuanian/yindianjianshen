@@ -192,5 +192,6 @@
   }
   #Coupon .couponList .card .bottom .right{
      font-size:0.24rem;
+    color:red;
   }
 </style>
