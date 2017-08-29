@@ -9,6 +9,7 @@ const Sports = resolve => require(['../views/Sports.vue'], resolve);
 const SportsList = resolve => require(['../views/SportsList.vue'], resolve);
 const Invite = resolve => require(['../views/Invite.vue'], resolve);
 const Coupon = resolve => require(['../views/Coupon.vue'], resolve);
+const Order = resolve => require(['../views/Order.vue'], resolve);
 export default new Router({
   routes: [
     {
@@ -63,6 +64,14 @@ export default new Router({
         title: '我的礼券'
       },
       component: Coupon
+    },
+    {
+      path: '/order/:orderId',
+      name: 'Order',
+      meta: {
+        title: '我的订单'
+      },
+      component: Order
     }
   ]
 })

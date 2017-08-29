@@ -72,12 +72,11 @@
           <p>扫描门禁二维码</p>
           <p>验证成功入场上课</p>
         </div>
-
       </div>
     </div>
     <div class="navbar">
-      <router-link v-if="buttonList.disable" to="/" class="left">立即预约</router-link>
-      <router-link v-if="!buttonList.disable" to="/" class="left" :class="{'disable':buttonList.disable === false}">立即预约</router-link>
+      <router-link v-if="buttonList.disable" :to="{name:'Order',params:{orderId:detailObj.id}}" class="left">立即预约</router-link>
+      <router-link v-if="!buttonList.disable" :to="{name:'Order',params:{orderId:detailObj.id}}" class="left" :class="{'disable':buttonList.disable === false}">立即预约</router-link>
     <router-link to="/invite" class="left">分享</router-link>
   </div>
   </div>
