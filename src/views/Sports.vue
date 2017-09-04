@@ -125,7 +125,7 @@
         this.swiper.slideTo(0, 0, false);
           this.$ajax({
             method:'POST',
-            url:'/api/course/schedule'
+            url:'http://106.15.91.17/course/schedule'
           }).then(function(response){
             if(response.data.message == 'SUCCESS'){
               this.sportsList = response.data.data;
@@ -147,7 +147,7 @@
 
           this.$ajax({
             method:'POST',
-            url:'/api/course/detail',
+            url:'http://106.15.91.17/course/detail',
             params:{
               'id':this.$route.params.sportsId
             }

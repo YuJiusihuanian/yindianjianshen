@@ -30,7 +30,7 @@
       mounted(){
         this.$ajax({
           method:'POST',
-          url:'/api/user/invitation'
+          url:'http://106.15.91.17/user/invitation'
         }).then(function(response){
           if(response.data.message == 'SUCCESS'){
             this.invitationList = response.data.data;

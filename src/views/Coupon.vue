@@ -43,7 +43,7 @@
       mounted(){
         this.$ajax({
           method:'POST',
-          url:'/api/coupon/list'
+          url:'http://106.15.91.17/coupon/list'
         }).then(function(response){
           if(response.data.message == 'SUCCESS'){
             this.couponList = response.data.data;

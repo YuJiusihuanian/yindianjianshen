@@ -20,7 +20,7 @@
       mounted(){
         this.$ajax({
           method:'POST',
-          url:'/api/yen/card/list'
+          url:'http://106.15.91.17/yen/card/list'
         }).then(function(response){
             if(response.data.message == 'SUCCESS'){
                 this.cardList = response.data.data;
