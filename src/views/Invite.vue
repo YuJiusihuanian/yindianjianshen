@@ -29,8 +29,8 @@
       },
       mounted(){
         this.$ajax({
-          method:'GET',
-          url:'/api/couponuserinvitation'
+          method:'POST',
+          url:'/api/user/invitation'
         }).then(function(response){
           if(response.data.message == 'SUCCESS'){
             this.invitationList = response.data.data;

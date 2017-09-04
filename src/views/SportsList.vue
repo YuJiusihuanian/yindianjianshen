@@ -56,8 +56,8 @@
         },
       mounted(){
         this.$ajax({
-          method:'GET',
-          url:'/api/courseschedule'
+          method:'POST',
+          url:'/api/course/schedule'
         }).then(function(response){
           if(response.data.message == 'SUCCESS'){
             this.sportsList = response.data.data;
@@ -83,8 +83,8 @@
         sportsHover(item,key){
             this.ind = key;
           this.$ajax({
-            method:'GET',
-            url:'/api/courseschedule'
+            method:'POST',
+            url:'/api/course/schedule'
           }).then(function(response){
             if(response.data.message == 'SUCCESS'){
               this.weekList = response.data.data.course4Day[this.ind];

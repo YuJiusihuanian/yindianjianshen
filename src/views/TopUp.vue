@@ -70,9 +70,9 @@
       mounted(){
         this.cardId = this.$route.params.cardId;
         this.$ajax({
-          method:'GET',
+          method:'POST',
           data:{"cardId":this.cardId},
-          url:'/api/yencardbuild'
+          url:'/api/yen/card/build'
         }).then(function(response){
             console.log(response)
           if(response.data.message == 'SUCCESS'){
@@ -147,13 +147,13 @@
         },
         payBtn(){
           this.$ajax({
-            method:'GET',
+            method:'POST',
             data:{
                 "cardId":this.cardId,
                 "templateId":this.hoverObj.id,
                 "couponId":this.activeObj.couponUserId
             },
-            url:'/api/yencardcreate'
+            url:'/api/yen/card/create'
           }).then(function(response){
             if(response.data.message == 'SUCCESS'){
               this.cardOne = response.data.data;

@@ -42,8 +42,8 @@
       },
       mounted(){
         this.$ajax({
-          method:'GET',
-          url:'/api/couponuserlist'
+          method:'POST',
+          url:'/api/coupon/list'
         }).then(function(response){
           if(response.data.message == 'SUCCESS'){
             this.couponList = response.data.data;

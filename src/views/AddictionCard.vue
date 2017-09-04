@@ -19,8 +19,8 @@
       },
       mounted(){
         this.$ajax({
-          method:'GET',
-          url:'/api/yencardlist'
+          method:'POST',
+          url:'/api/yen/card/list'
         }).then(function(response){
             if(response.data.message == 'SUCCESS'){
                 this.cardList = response.data.data;
