@@ -20,7 +20,7 @@
       mounted(){
         this.$ajax({
           method:'POST',
-          url:'http://106.15.91.17/yen/card/list'
+          url:'http://api.hitianbao.com/yen/card/list'
         }).then(function(response){
             if(response.data.message == 'SUCCESS'){
                 this.cardList = response.data.data;

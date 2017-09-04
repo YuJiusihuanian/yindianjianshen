@@ -43,7 +43,7 @@
       mounted(){
         this.$ajax({
           method:'POST',
-          url:'http://106.15.91.17/coupon/list'
+          url:'http://api.hitianbao.com/coupon/list'
         }).then(function(response){
           if(response.data.message == 'SUCCESS'){
             this.couponList = response.data.data;

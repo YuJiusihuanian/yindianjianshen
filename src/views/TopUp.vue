@@ -72,7 +72,7 @@
         this.$ajax({
           method:'POST',
           data:{"cardId":this.cardId},
-          url:'http://106.15.91.17/yen/card/build'
+          url:'http://api.hitianbao.com/yen/card/build'
         }).then(function(response){
             console.log(response)
           if(response.data.message == 'SUCCESS'){

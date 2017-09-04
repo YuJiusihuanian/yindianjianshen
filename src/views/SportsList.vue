@@ -57,7 +57,7 @@
       mounted(){
         this.$ajax({
           method:'POST',
-          url:'http://106.15.91.17/course/schedule'
+          url:'http://api.hitianbao.com/course/schedule'
         }).then(function(response){
           if(response.data.message == 'SUCCESS'){
             this.sportsList = response.data.data;
@@ -84,7 +84,7 @@
             this.ind = key;
           this.$ajax({
             method:'POST',
-            url:'http://106.15.91.17/course/schedule'
+            url:'http://api.hitianbao.com/course/schedule'
           }).then(function(response){
             if(response.data.message == 'SUCCESS'){
               this.weekList = response.data.data.course4Day[this.ind];

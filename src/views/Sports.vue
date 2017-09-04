@@ -125,7 +125,7 @@
         this.swiper.slideTo(0, 0, false);
           this.$ajax({
             method:'POST',
-            url:'http://106.15.91.17/course/schedule'
+            url:'http://api.hitianbao.com/course/schedule'
           }).then(function(response){
             if(response.data.message == 'SUCCESS'){
               this.sportsList = response.data.data;
@@ -147,7 +147,7 @@
 
           this.$ajax({
             method:'POST',
-            url:'http://106.15.91.17/course/detail',
+            url:'http://api.hitianbao.com/course/detail',
             params:{
               'id':this.$route.params.sportsId
             }
