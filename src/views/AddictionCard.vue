@@ -20,7 +20,7 @@
       mounted(){
         this.$ajax({
           method:'POST',
-          url:'http://www.hitanbao.com/yen/card/list'
+          url:'http://www.hitanbao.com:8080/yen/card/list'
         }).then(function(response){
             if(response.data.message == 'SUCCESS'){
                 this.cardList = response.data.data;

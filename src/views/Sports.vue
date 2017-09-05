@@ -125,7 +125,7 @@
         this.swiper.slideTo(0, 0, false);
           this.$ajax({
             method:'POST',
-            url:'hhttp://www.hitanbao.com/course/schedule'
+            url:'hhttp://www.hitanbao.com:8080/course/schedule'
           }).then(function(response){
             if(response.data.message == 'SUCCESS'){
               this.sportsList = response.data.data;
@@ -147,7 +147,7 @@
 
           this.$ajax({
             method:'POST',
-            url:'http://www.hitanbao.com/course/detail',
+            url:'http://www.hitanbao.com:8080/course/detail',
             params:{
               'id':this.$route.params.sportsId
             }

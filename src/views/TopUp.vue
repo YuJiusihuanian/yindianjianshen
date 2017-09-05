@@ -72,7 +72,7 @@
         this.$ajax({
           method:'POST',
           data:{"cardId":this.cardId},
-          url:'http://www.hitanbao.com/yen/card/build'
+          url:'http://www.hitanbao.com:8080/yen/card/build'
         }).then(function(response){
             console.log(response)
           if(response.data.message == 'SUCCESS'){
@@ -153,7 +153,7 @@
                 "templateId":this.hoverObj.id,
                 "couponId":this.activeObj.couponUserId
             },
-            url:'http://www.hitanbao.com/yen/card/create'
+            url:'http://www.hitanbao.com:8080/yen/card/create'
           }).then(function(response){
             if(response.data.message == 'SUCCESS'){
               this.cardOne = response.data.data;

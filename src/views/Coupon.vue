@@ -43,7 +43,7 @@
       mounted(){
         this.$ajax({
           method:'POST',
-          url:'http://www.hitanbao.com/coupon/list'
+          url:'http://www.hitanbao.com:8080/coupon/list'
         }).then(function(response){
           if(response.data.message == 'SUCCESS'){
             this.couponList = response.data.data;

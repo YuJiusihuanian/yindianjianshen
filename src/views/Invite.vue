@@ -30,7 +30,7 @@
       mounted(){
         this.$ajax({
           method:'POST',
-          url:'http://www.hitanbao.com/user/invitation'
+          url:'http://www.hitanbao.com:8080/user/invitation'
         }).then(function(response){
           if(response.data.message == 'SUCCESS'){
             this.invitationList = response.data.data;
