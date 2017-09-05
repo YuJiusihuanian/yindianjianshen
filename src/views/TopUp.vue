@@ -189,7 +189,7 @@
               "templateId":this.hoverObj.id,
               "couponId":this.activeObj.couponUserId
             },
-            url:'http://www.hitanbao.com/api/yencardadjust'
+            url:'http://www.hitanbao.com:8080/api/yencardadjust'
           }).then(function(response){
             if(response.data.message == 'SUCCESS'){
               this.adjust = response.data.data;
